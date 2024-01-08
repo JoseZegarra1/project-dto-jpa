@@ -27,4 +27,6 @@ public class LocalController {
     public List<LocalOpenView> findAllLocalViewOpen(){
        return localService.findBy();
     }
+
+
 }
