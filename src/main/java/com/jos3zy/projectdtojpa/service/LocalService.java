@@ -9,4 +9,5 @@ public interface LocalService {
     List<Local> findAll();
 
 
+
 }

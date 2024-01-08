@@ -1,6 +1,7 @@
 package com.jos3zy.projectdtojpa.controller;
 
 
+import com.jos3zy.projectdtojpa.dto.closed.ProductClosedView;
 import com.jos3zy.projectdtojpa.entity.Product;
 import com.jos3zy.projectdtojpa.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +25,10 @@ public class ProductController {
     @GetMapping("/findAll")
     public List<Product> findAll(){
        return productService.findAll();
-
     }
 
+@GetMapping("/findAllProductViewClosed")
+    public List<ProductClosedView> findAllProductViewClosed(){
+       return productService.findBy();
+    }
 }
