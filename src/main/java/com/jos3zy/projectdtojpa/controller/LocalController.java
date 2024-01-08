@@ -1,6 +1,7 @@
 package com.jos3zy.projectdtojpa.controller;
 
 
+import com.jos3zy.projectdtojpa.dto.open.LocalOpenView;
 import com.jos3zy.projectdtojpa.entity.Local;
 import com.jos3zy.projectdtojpa.service.LocalService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,5 +21,10 @@ public class LocalController {
     @GetMapping("/findAll")
     public List<Local> findAll(){
        return localService.findAll();
+    }
+
+    @GetMapping("/findAllLocalViewOpen")
+    public List<LocalOpenView> findAllLocalViewOpen(){
+       return localService.findBy();
     }
 }
